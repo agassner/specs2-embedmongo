@@ -21,4 +21,4 @@ class ModelTest extends Specification with EmbedConnection {
 
 case class Model(id: ObjectId = new ObjectId, name: String)
 
-object Model extends SalatDAO[Model, ObjectId](collection = MongoConnection("localhost", 12345)("test")("model")) {}
+object Model extends SalatDAO[Model, ObjectId](collection = MongoClient("localhost", 12345)("test")("model")) {}
